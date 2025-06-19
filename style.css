@@ -1,7 +1,13 @@
+/*
+    BMI Calculator Stylesheet
+    - Uses Roboto and Caveat fonts
+    - Responsive and accessible design
+    - Organized by section: base, layout, form, table, signature, media queries
+*/
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap');
 
-
+/* Caveat font for signature/contribute link */
 .caveat {
     font-family: "Caveat", cursive;
     font-size: medium;
@@ -9,6 +15,7 @@
     font-style: normal;
 }
 
+/* Reset and base styles */
 * {
     margin: 0;
     padding: 0;
@@ -18,10 +25,12 @@
     font-style: normal;
 }
 
+/* Placeholder alignment for input fields */
 ::placeholder {
     text-align: end;
 }
 
+/* Main body layout */
 body {
     display: flex;
     flex-direction: column;
@@ -33,6 +42,7 @@ body {
     color: #fff;
 }
 
+/* App title and description */
 #start {
     display: flex;
     flex-direction: column;
@@ -41,6 +51,7 @@ body {
     text-align: center;
 }
 
+/* ===================== */
 /* BMI Calculator [START]*/
 form {
     display: flex;
@@ -104,9 +115,10 @@ form {
     padding: 20px 10px 10px 0px;
     font-size: large;
 }
-
 /* BMI Calculator [END]*/
+/* ===================== */
 
+/* ===================== */
 /* BMI Range [START] */
 #bmi-range {
     display: flex;
@@ -157,8 +169,10 @@ td {
 details:hover {
     box-shadow: none;
 }
-
 /* BMI Range [END] */
+/* ===================== */
+
+/* Signature and contribute link styles */
 .signature {
     display: flex;
     justify-content: center;
@@ -174,13 +188,13 @@ details:hover {
     color: rgba(255, 255, 255, 0.9);
 }
 
+/* ===================== */
+/* Responsive Design [START] */
 @media (width <=768px) {
-
     #height,
     #weight {
         width: 200px;
     }
-
     #calculate,
     #clear {
         font-size: small;
@@ -191,53 +205,43 @@ details:hover {
     #start {
         gap: 2px;
     }
-
     #start h1 {
         font-size: large;
     }
-
     #start p {
         font-size: x-small;
     }
-
     form {
         width: 80vw;
         gap: 20px;
         padding: 30px;
     }
-
     #container-1 {
         gap: 20px;
     }
-
     .userInput {
         flex-direction: column;
         gap: 5px;
         align-items: start;
         font-size: small;
-
     }
-
     .button {
         justify-content: center;
     }
-
     #container-2 {
         font-size: small;
     }
-
     #height,
     #weight {
         width: auto;
         padding: 5px;
         font-size: small;
     }
-
     details {
         font-size: small;
     }
-
     #code {
         font-size: x-small;
     }
 }
+/* Responsive Design [END] */

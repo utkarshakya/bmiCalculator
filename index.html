@@ -1,3 +1,9 @@
+<!-- BMI Calculator HTML
+     - Improved for accessibility and validation
+     - Uses number inputs, required fields, and ARIA attributes
+     - Includes visually hidden label for screen readers
+     - Inline style for visually-hidden class
+-->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,23 +15,26 @@
 </head>
 
 <body>
+    <!-- Signature and contribution link -->
     <div class="signature">
         <!-- <a href="" target="_blank"><span class="caveat">utkarshakya</span></a> -->
         <a href="https://github.com/utkarshakya/bmi-calculator.git" target="_blank"><span class="caveat">contribute</span></a>
     </div>
+    <!-- App title and description -->
     <div id="start">
         <h1>BMI Calculator</h1>
         <p>Try It Now, Enter Values To Get Body Mass Index</p>
     </div>
-    <form>
+    <!-- BMI Calculator Form -->
+    <form autocomplete="off">
         <div id="container-1">
             <div class="userInput">
                 <label for="height">Height</label>
-                <input type="text" id="height" placeholder="cm">
+                <input type="number" id="height" placeholder="cm" min="0" step="any" required>
             </div>
             <div class="userInput">
                 <label for="weight">Weight</label>
-                <input type="text" id="weight" placeholder="kg">
+                <input type="number" id="weight" placeholder="kg" min="0" step="any" required>
             </div>
             <div class="button">
                 <input type="submit" value="Calculate" id="calculate">
@@ -33,9 +42,12 @@
             </div>
         </div>
         <div id="container-2">
-            <span id="result">Result Will Appear Here</span>
+            <!-- Visually hidden label for accessibility -->
+            <label for="result" class="visually-hidden">BMI Result</label>
+            <span id="result" aria-live="polite">Result Will Appear Here</span>
         </div>
     </form>
+    <!-- BMI Range Table -->
     <div id="bmi-range">
         <details>
             <summary>Range Table</summary>
@@ -79,7 +91,20 @@
             </table>
         </details>
     </div>
-
+    <!-- Inline visually-hidden class for accessibility -->
+    <style>
+    .visually-hidden {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
+    </style>
+    <!-- Script for BMI logic -->
     <script src="script.js"></script>
 </body>
 
